@@ -1,0 +1,129 @@
+.button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 48px;
+    min-width: 96px;
+    text-decoration: none;
+    transition: background-color .2s, box-shadow .2s, color .2s;
+    vertical-align: middle;
+}
+
+#joinmeet {
+    background: url(/images/search.png) no-repeat 12px 11px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    height: 48px;
+    padding: 10px 0 10px 48px;
+    transform: translateY(1px);
+}
+
+.joindiv {
+    margin-left: 20px;
+}
+
+.join-button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #9aa0a6;
+    padding: 0;
+    margin-left: 16px;
+    background-color: transparent;
+    min-width: auto;
+    font-family: "Google Sans", Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 48px;
+}
+
+.join-button:hover {
+    background-color: #f4f8fe;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (max-width:1188px) {
+    .buttons {
+        display: block;
+    }
+
+    .joindiv {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+}
+
+.services {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.services-item {
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.services-item .icon img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #212121;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.services-item .services-content h3 {
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+
+.services-item .services-content h3 a {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.services-item:hover {
+    background: #d7e0e0;
+}
+
+.change {
+    margin: 10vh 0 10vh 10vh;
+}
+
+.change1 {
+    margin: 10vh 10vh 10vh 0;
+}
+
+.imgdiv {
+    margin-top: 11vh;
+}
+
+@media (max-width: 991px) {
+    .section-content {
+        order: 1;
+    }
+
+    .section-image {
+        order: 2;
+    }
+
+    .change,
+    .change1 {
+        margin: 0 0 10vh 0vh;
+    }
+
+    .imgdiv {
+        margin-top: 0;
+    }
+}
