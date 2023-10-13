@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <%- include('../partial/mainpageheader1')%>
+
+        <div class="container card mt-5 mb-3" style="width:65%">
+            <div class="card-header">
+                <h5 class="card-title text-left">Basic Info</h5>
+                <p>Here You can check and update details.</p>
+            </div>
+            <div class="card-body">
+                <table class="table table-stripped table-hover">
+                    <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <td>Profile Picture</td>
+                        <td>
+                            <img src="/images/<%= user.profile ? user.profile : 'profile.png' %>" class="img-responsive rounded-circle" alt="myprofile" width="30vw">
+                        </td>
+                    </tr>
+                    <tr onclick="window.location.href = '/updateprofile/name'">
+                        <td>Name</td>
+                        <td colspan="2">
+                            <%= user.username%>
+                            <span class="" style="margin-left: 75%;"><i class="fa-solid fa-greater-than" style="color: rgb(10, 9, 9)"></i></span>	
+                        </td>
+                    </tr>
+                    <tr onclick="window.location.href = '/updateprofile/birthday'">
+                        <td>Birthday</td>
+                        <td>
+                            <%= user.birthyear%>
+                            <span class="" style="margin-left: 91%;"><i class="fa-solid fa-greater-than" style="color: rgb(10, 9, 9)"></i></span>	
+                        </td>
+                    </tr>
+                    <tr onclick="window.location.href = '/updateprofile/gender'">
+                        <td>Gender</td>
+                        <td>Male
+                            <span class="" style="margin-left: 91%;"><i class="fa-solid fa-greater-than" style="color: rgb(10, 9, 9)"></i></span>	
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="container card mb-3" style="width:65%">
+            <div class="card-header">
+                <h5 class="card-title text-left">Contact Info</h5>
+                <p>Here You can check and update details.</p>
+            </div>
+            <div class="card-body">
+                <table class="table table-stripped table-hover">
+                    <tr onclick="alert('Cannot change email rightnow')">
+                        <td>Email</td>
+                        <td>
+                            <%= user.email%>
+                            <span style="margin-left: 68%;"><i class="fa-solid fa-greater-than" style="color: rgb(10, 9, 9)"></i></span>	
+                        </td>
+                    </tr>
+                    <tr onclick="window.location.href='/updateprofile/phone'">
+                        <td>Contact Number</td>
+                        <td>
+                            <%= user.contactNumber%>
+                            <span class="" style="margin-left: 84%;"><i class="fa-solid fa-greater-than" style="color: rgb(10, 9, 9)"></i></span>	
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="container card mb-3" style="width:65%">
+            <div class="card-header">
+                <h5 class="card-title text-left">Address</h5>
+                <p>Here You can check and update details.</p>
+            </div>
+            <div class="card-body">
+                <table class="table table-stripped table-hover">
+                    <tr onclick="window.location.href='/updateprofile/address'">
+                        <td>Home</td>
+                        <td>
+                            <%= user.address%>
+                            <span class="" style="margin-left: 73%;"><i class="fa-solid fa-greater-than" style="color: rgb(10, 9, 9)"></i></span>	
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add a Profile Picture</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/photo" method="post" enctype="multipart/form-data" class="container text-center rounded p-5 w-100">
+                            <h2 class="text-center">Add a profile picture</h2>
+                            <br>
+                            <div class="mb-3">
+                                <input type="file" class="form-control" name="profile" id="profile">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+                            <a href="/viewprofile"><input type="button" class="btn btn-md btn-secondary" value="Cancel"></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer>
+            <div class="container-fluid mt-5">
+                <footer class="text-center text-lg-start text-black" style="background-color: whitesmoke">
+                    <div class="container p-4 pb-0">
+                        <section class="">
+                            <p class="d-flex justify-content-center align-items-center">
+                                <span class="me-3" style="font-size: 1.7rem;">Join our Social Community</span>
+                            </p>
+                        </section>
+                        <section class="mb-4 text-center">
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </section>
+                    </div>
+                    <div class="text-center text-black" style="background-color: whitesmoke; font-size: 1.2rem;">
+                        &copy; VCLT. All Rights Reserved.
+                    </div>
+                </footer>
+            </div>
+        </footer>
+</body>
+
+</html>

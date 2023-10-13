@@ -1,0 +1,65 @@
+app id 
+2136429826
+
+ssid
+bd0d6eddea34f843147121fe0ac9bf14
+
+
+
+// profile
+
+    <div class="container p-5 d-flex" style="min-width: 100%;">
+        <div class="card mx-auto my-5" style="max-width: 80%;">
+            <div class="row g-0">
+                <div class="col-md-4 p-5 text-center" style="background-color: rgb(23, 84, 146);">
+                    <img src="images/profile.png" alt="" width="60%">
+                    <hr>
+                    <h5><b><%= user.username%></b></h5>
+                </div>
+                <div class="col-md-8 text-left">
+                    <div class="card-body">
+                        <h5 class="card-title text-left">Information</h5>
+                        <hr>
+                        <table class="table table-stripped">
+                            <tr>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Contact Number
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= user.email%>
+                                </td>
+                                <td>
+                                    _________________
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Date of Birth
+                                </th>
+                                <th>
+                                    Address
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= user.birthyear%>
+                                </td>
+                                <td>
+                                    <%= user.email%>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    // Send the user's profile details as a JSON response
+    // return res.status(200).json({ user });

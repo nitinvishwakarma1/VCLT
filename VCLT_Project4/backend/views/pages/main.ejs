@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <%- include('../partial/mainpageheader1') %>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="column col-lg-6" style="padding: 8vh;">
+                    <div style="width: 100%; padding: 20px 0 20px 0;">
+                        <h1 style="font-size: 45px;">Video call and meeting for everyone</h1>
+                    </div>
+                    <div class="mt-1">
+                        <h5 class="mr-3" style="color: #6a6e74;">VCLT is a service that is available to everyone on
+                            every device. It can be used for secure and high quality video meetings and calls.</h5>
+                    </div>
+                    <div class="mt-5 buttons">
+                        <div>
+                            <button src="/moto" class="btn button" style="background-color: #1a73e8;">
+                                <span><a href="/moto" class="text-light nav-link"><i class="fa fa-video-camera" style="font-size:16px; color:white"></i> Start a meeting</a></span>
+                            </button>
+                        </div>
+                        <div class="joindiv" style="color: black;background-color: white">
+                            <input id="joinmeet" placeholder="Enter meeting code" class="glue-caption" minlength="1"
+                                maxlength="50" aria-label="Enter meeting code" size="18">
+                            <a href=""><button class="join-button">Join</button></a>
+                        </div>
+                    </div>
+                    <hr class="mt-5" style="border: 1px solid rgb(0, 0, 0);">
+                    <div class="mt-4">
+                        <span style="font-size: 1rem;font-weight: 650;">Don't have an Account?</span><a class="ms-2"
+                            href="" style="font-size: 1rem; color: rgb(99, 91, 91); font-weight: 550;">Get started
+                            now</a>
+                    </div>
+                </div>
+                <div class="column col-lg-5 ps-5">
+                    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://lh3.googleusercontent.com/g6WWfSMs3V0w2hhsaoc9myxQXmfO3IcRPwIsSo7nUJkNDHFb2JT4bffBiNH50_seojxYfC3AfBz8xNHd5k7tqXVsjRVvHGfJfAPx-zz8Lk7EQ0cPuA=rwu-v1-w1400"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.hoppingeek.com/wp-content/uploads/2020/04/whatsapp.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.timeoutabudhabi.com/public/styles/full_img/public/images/2021/02/05/Zoom-video-app.jpg?itok=VeQfzHGU"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        span {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="column col-lg-9">
+                    <a class="navbar-brand" href=""><img
+                            src="https://vitalwebconsultants.com.au/wp-content/uploads/2020/12/Video-Calling-Yellow.png"
+                            alt="" height="40vh" width="40vh"></a>
+                    <button class="navbar-toggler" type="button" style="background-color: #fff;"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="column col-lg-3 collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><button class="btn"
+                                    style="color: black;background-color: #fff; ">SignIn</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><button class="btn"
+                                    style="color: black;background-color: #fff; ">SignUp</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="row text-center" style="background-color: #fff; --bs-gutter-x: 0;">
+            <div class="column col-lg-6" style="background-color:rgb(199,214,227);">
+                <div class="container text-center" style="margin-top:25%;">
+                    <img class="" src="/images/computer.png" alt="" width="63%">
+                </div>
+            </div>
+            <div class="column col-lg-6" style="background-color: #fff;">
+                <form action="/main" method="" onsubmit=""
+                    class="container text-center mt-3 d-flex flex-column align-items-center">
+                    <h1 class="mb-3">Create your Account</h1>
+                    <p class="mb-4" style="font-size: 1.3rem;">Enter Your Full name or Password</p>
+                    <input type="text" name="username"
+                        class="form-control form-control-lg border border-dark rounded-pill mb-4 fs-5" id="username"
+                        placeholder="Full Name" style="width:50%">
+                        <span id="usernamewarnning"></span>
+                     <input type="number" name="birthyear"
+                        class="form-control form-control-lg border border-dark rounded-pill mb-4 fs-5" id="birthyear"
+                        placeholder="Birth Year" style="width: 50%;"> 
+                    <input type="email" name="email"
+                        class="form-control form-control-lg border border-dark rounded-pill mb-4 fs-5" id="email" required
+                        placeholder="Email Address" style="width:50%">
+                    <input type="password" name="password"
+                        class="form-control form-control-lg border border-dark rounded-pill mb-4 fs-5" id="password" required
+                        placeholder="Password" style="width: 50%;">
+                    <input type="password" name="password"
+                        class="form-control form-control-lg border border-dark rounded-pill mb-4 fs-5" id="cpassword" required
+                        placeholder="Confirm Password" style="width: 50%;">
+                    <input type="submit" value="Continue" class="form-control form-control-lg rounded-pill pb-3"
+                        id="continue" style="width: 50%;background-color: rgb(217,217,217);"><br>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

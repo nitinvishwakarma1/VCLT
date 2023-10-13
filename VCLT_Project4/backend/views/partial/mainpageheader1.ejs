@@ -1,0 +1,34 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0,0,0);">
+        <div class="container-fluid">
+            <div class="column col-lg-8">
+                <a class="navbar-brand" href=""><img src="/images/VCLT.png" alt="vcltLogo" class="img-fluid" width="113vw"></a>
+                <button class="navbar-toggler" type="button" style="background-color: #fff;" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="column col-lg-4 collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <h6 class="text-light mt-3" style="margin-top: 5%;"><%= date%></h6>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/<%= user.profile ? user.profile : 'profile.png' %>"  alt="myprofile" class="img-responsive rounded-circle" width="35vw" style="margin-left: 10vw;">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-center dropdown-menu-bottom w-100 ms-4" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/viewprofile">View Profile</a></li>
+                            <li><a class="dropdown-item" href="/manageprofile/deactivate">Manage Account</a></li>
+                            <li><a class="dropdown-item" href="#">View History</a></li>
+                            <li><a class="dropdown-item" href="/manageprofile/privacy">Privacy and Security</a></li>
+                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+</header>
