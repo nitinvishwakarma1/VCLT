@@ -7,12 +7,10 @@ import emailValidator from 'deep-email-validator';
 
 const maxAge = 3 * 24 * 60 * 60;
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: {
-        user: 'vishnitin51@gmail.com',
-        pass: 'rfbr ijwc vcey ibaf'
+    service:'gmail',
+    auth:{
+        user : "vishnitin51@gmail.com",
+        pass : "rfbr ijwc vcey ibaf"
     }
 });
 
